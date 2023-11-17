@@ -8,9 +8,9 @@
 
 	<!-- Google Font -->
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
 
 	<!-------->
 
@@ -24,7 +24,7 @@
 
 
 		.navMenu {
-			font-family: 'Advent Pro', sans-serif;
+			font-family: 'Nunito', sans-serif;
 			padding: 8px;
 			text-align: center;
 			margin: 7px auto;
@@ -34,7 +34,6 @@
 		.navMenu a {
 			color: #272727;
 			text-decoration: none;
-			text-transform: uppercase;
 			display: inline-block;
 			padding: 6px;
 		}
@@ -45,12 +44,12 @@
 
 		.border {
 			border: 1px solid #cccccc;
+			border-radius: 10px;
 
 		}
 
 		.navMenu a:hover {
-
-			color: #d09c0b;
+			color: #941FA3;
 		}
 	</style>
 </head>
@@ -58,15 +57,15 @@
 <body>
 
 	<nav class="navMenu  border">
-		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-duotone fa-house"></i> Home</a>
-		<a id="VTEX" onclick="navigate(this.id)" href="#"> <i class="fa-duotone fa-store"></i> VTEX</a>
-		<a id="Plataforma" onclick="navigate(this.id)" href="#"> <i class="fa-duotone fa-books"></i> Plataforma</a>
-		<a id="Banco-VPN" onclick="navigate(this.id)" href="#"> <i class="fa-duotone fa-server"></i> Banco de Dados & VPN</a>
-		<a id="Atribuições" onclick="navigate(this.id)" href="#"> <i class="fa-duotone fa-users"></i> Atribuições</a>
-		<a id="Novembro" onclick="navigate(this.id)" href="#"> <i class="fa-duotone fa-dumbbell"></i> Novembro</a>
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="VTEX" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-store"></i> VTEX</a>
+		<a id="Plataforma" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open-reader"></i> Plataforma</a>
+		<a id="Banco-VPN" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-server"></i> Banco de Dados & VPN</a>
+		<a id="Atribuicoes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-users"></i> Atribuições</a>
+		<a id="Novembro" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-dumbbell"></i> Novembro</a>
 		<a id="Databases" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-database"></i> Databases</a>
 		<a id="Importantes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-thumbtack"></i> Importantes</a>
-		<a id="Agenda" onclick="navigate(this.id)" href="#"> <i class="fa-duotone fa-address-book"></i> Agenda</a>
+		<a id="Agenda" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-address-book"></i> Agenda</a>
 		
 
 	</nav>
@@ -90,7 +89,7 @@
 				window.open("https://www.notion.so/Plataforma-05aa719312e8459492996a9155c97103?pvs=4", '_blank').focus();
 			else if (id == "Banco-VPN")
 				window.open("https://www.notion.so/Banco-de-Dados-VPN-aa23d10d55044c3ca374a86f5d94ba29?pvs=4", '_blank').focus();
-			else if (id == "Atribuições")
+			else if (id == "Atribuicoes")
 				window.open("https://www.notion.so/Atribui-es-d2a47a7ad1944d6b8900d6d787957cb9?pvs=4", '_blank').focus();
 			else if (id == "Novembro")
 				window.open("https://www.notion.so/Novembro-355b6c5297cf478fb6cfead598a63cf8?pvs=4", '_blank').focus();
