@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="VTEX" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
+		<a id="Plataforma" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Planner</a>
+		<a id="Banco de Dados & VPN" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Projects</a>
+		<a id="Atribuições" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Tasks</a>
+		<a id="Novembro" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> Business</a>
+		<a id="Databases" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> Knowledge</a>
+		<a id="Importantes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-layer-group"></i> Topics</a>
+		<a id="Agenda" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Notes</a>
+		
+
+	</nav>
+
+
+	<script>
+
+		let direction = "vertical";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/Home-45d3ec865b8847ad9648dc4b3b7432e8?pvs=4", '_blank').focus();
+			else if (id == "VTEX")
+				window.open("https://www.notion.so/VTex-2a1ded1f025e4023a709001321cafe12?pvs=4", '_blank').focus();
+			else if (id == "Plataforma")
+				window.open("https://www.notion.so/Plataforma-05aa719312e8459492996a9155c97103?pvs=4", '_blank').focus();
+			else if (id == "Banco de Dados & VPN")
+				window.open("https://www.notion.so/Banco-de-Dados-VPN-aa23d10d55044c3ca374a86f5d94ba29?pvs=4", '_blank').focus();
+			else if (id == "Atribuições")
+				window.open("https://www.notion.so/Atribui-es-d2a47a7ad1944d6b8900d6d787957cb9?pvs=4", '_blank').focus();
+			else if (id == "Novembro")
+				window.open("https://www.notion.so/Novembro-355b6c5297cf478fb6cfead598a63cf8?pvs=4", '_blank').focus();
+			else if (id == "Databases")
+				window.open("https://www.notion.so/Databases-47ff1cfd70324a07a3c232bd19736352?pvs=4", '_blank').focus();
+			else if (id == "Importantes")
+				window.open("https://www.notion.so/Importantes-4f178bbec4a14d30b2cf0cf0e207293b?pvs=4", '_blank').focus();
+			else if (id == "Agenda")
+				window.open("https://www.notion.so/4642a7506ae1408f8e37e0f66aa35deb?v=c558e90811884edd9507950ad3ab9c4b&pvs=4", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
