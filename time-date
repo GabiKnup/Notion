@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+
+    <style>
+
+
+        body{
+            font-family: 'Nunito', sans-serif;
+
+        }
+
+        .widget {
+            padding: 5px 5px ;
+            color: #4F4F4F;
+            background-color: #FFF6F3;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
+            max-width: 95%;
+            margin: auto;
+            
+
+        }
+
+           
+        .greet{
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .date {
+      
+            font-family: 'Nunito', sans-serif;
+            font-size: 20px;
+        }
+
+        .clock {
+            font-family: 'Nunito', sans-serif;
+            font-size: 46px;
+        }
+
+        .time {
+            display: inline-block;
+            min-width: 20px;
+        }
+
+        .colon {
+            font-size: 46px;
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<div class="container>">
+    <div class="widget">
+
+            <div class="greet" id="greet"></div>
+
+            <div class="clock">
+                <div class="time" id="hour"></div>
+                <div class="colon">:</div>
+                <div class="time" id="min"></div>
+
+            </div>
+
+            <div class="date" id="date"></div>
+
+    </div>
+</div>
+        
+
+<script>
+
+function dispalyGreetings(today){
+        hrs = today.getHours();
+        name="♡"
+        if (hrs < 12)
+            greet = 'Good Morning  '+name;
+        else if (hrs >= 12 && hrs <= 18)
+            greet = 'Good Afternoon '+name;
+        else if (hrs >= 18 && hrs <= 24)
+            greet = 'Good Evening  '+name;
+        document.getElementById('greet').innerHTML = greet;
+    }
+
+    function dispalyDate(today) {  
+       
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+        var dayName = days[today.getDay()];
+        var monthName = monthNames[today.getMonth()];
+        var date = today.getDate();
+        var year = today.getFullYear();
+        document.getElementById('date').innerHTML =dayName+", "+monthName+" "+date
+    }
+
+
+    function dispalyClock(today) {
+
+        var hour = padZeros(twelveHour(today.getHours()));
+        var minutes = padZeros(today.getMinutes());
+        var seconds = padZeros(today.getSeconds());
+       
+        if(today.getHours() >=12){
+            minutes+=" pm"
+        }
+        else{
+            minutes+=" am"
+        }
+       
+        document.getElementById('hour').innerHTML = hour;
+        document.getElementById('min').innerHTML = minutes;
+        document.getElementById('sec').innerHTML = seconds;
+    }
+
+    function twelveHour(hour) {
+        if (hour > 12) {
+            return hour -= 12
+        } else if (hour === 0) {
+            return hour = 12;
+        } else {
+            return hour
+        }
+    }
+    
+  function padZeros(num) {
+        if (num < 10) {
+            num = '0' + num
+        };
+        return num;
+    }
+
+    function dispalyWidget() {
+        var today = new Date();
+        dispalyGreetings(today);
+        dispalyDate(today);
+        dispalyClock(today);
+        setTimeout(dispalyWidget, 500);
+    }
+
+    dispalyWidget()
+
+
+</script>
+
+</body>
+</html>
