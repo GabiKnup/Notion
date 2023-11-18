@@ -32,11 +32,8 @@
             flex-direction: column;
             max-width: 95%;
             margin: auto;
-            
-
         }
-
-           
+  
         .greet{
             font-size: 10px;
             font-style: italic;
@@ -78,8 +75,6 @@
                 <div class="time" id="hour"></div>
                 <div class="colon">:</div>
                 <div class="time" id="min"></div>
-                <div class="colon">:</div>
-                <div class="time" id="sec"></div>
             </div>
 
             <div class="date" id="date"></div>
@@ -121,18 +116,18 @@ function dispalyGreetings(today){
 
         var hour = padZeros(twelveHour(today.getHours()));
         var minutes = padZeros(today.getMinutes());
-        var seconds = padZeros(today.getSeconds());
+        
        
         if(today.getHours() >=12){
-            seconds+=" pm"
+            minutes+=" pm"
         }
         else{
-            seconds+=" am"
+            minutes+=" am"
         }
        
         document.getElementById('hour').innerHTML = hour;
         document.getElementById('min').innerHTML = minutes;
-        document.getElementById('sec').innerHTML = seconds;
+        
     }
 
     function twelveHour(hour) {
@@ -145,7 +140,7 @@ function dispalyGreetings(today){
         }
     }
     
-  function padZeros(num) {
+    function padZeros(num) {
         if (num < 10) {
             num = '0' + num
         };
@@ -161,7 +156,6 @@ function dispalyGreetings(today){
     }
 
     dispalyWidget()
-
 
 </script>
 
