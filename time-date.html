@@ -42,7 +42,7 @@
         .date {
       
             font-family: 'Nunito', sans-serif;
-            font-size: 15px;
+            font-size: 10px;
         }
 
         .clock {
@@ -71,11 +71,13 @@
 
             <div class="greet" id="greet"></div>
 
-            <div class="clock">
+            <div class="clock" style="display: none;">
                 <div class="time" id="hour"></div>
                 <div class="colon">:</div>
                 <div class="time" id="min"></div>
             </div>
+
+            <div class="clock" id="clocka"></div>
 
             <div class="date" id="date"></div>
 
@@ -128,6 +130,7 @@ function dispalyGreetings(today){
         document.getElementById('hour').innerHTML = hour;
         document.getElementById('min').innerHTML = minutes;
         
+        document.getElementById('clocka').innerHTML =hour+":"+minutes;
     }
 
     function twelveHour(hour) {
