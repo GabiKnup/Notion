@@ -19,44 +19,49 @@
         body{
             font-family: 'Nunito', sans-serif;
             background-color: #FFF6F3;
-            justify-content:center;
-            align-items:center;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
         }
 
         .widget {
-            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color: #4F4F4F;
             background-color: #FFF6F3;
-            display: flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction: column;
-            max-width: 95%;
-            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);       
         }
   
         .greet{
-            font-size: 8vw;
+            font-size: 6vw;
+            letter-spacing: 2px;
             font-style: italic;
         }
 
         .date {
             font-family: 'Nunito', sans-serif;
-            font-size: 6vw;
+            font-size: 4vw;
         }
 
         .clock {
             font-family: 'Nunito', sans-serif;
-            font-size: 12vw;
+            font-size: 11vw;
         }
 
         .time {
             display: inline-block;
-            min-width: 6vw;
+            min-width: 4vw;
         }
 
         .colon {
-            font-size: 12vw;
+            font-size: 11vw;
             display: inline-block;
         }
 
