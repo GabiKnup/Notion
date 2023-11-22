@@ -21,24 +21,29 @@
             background-color: #FFF6F3;
         }
 
+        /* Está deixando centralizado verticalmente */
         .container {
             position: relative;
             height: 100vh;
         }
 
+
         .widget {
+            color: #4F4F4F;
+            background-color: #FFF6F3;
+            /* Está deixando os itens centralizados horizontalmente */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #4F4F4F;
-            background-color: #FFF6F3;
+            /* Está deixando centralizado verticalmente */
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);       
         }
-  
+
+
         .greet{
             font-size: 6vw;
             letter-spacing: 2px;
@@ -72,9 +77,13 @@
 
 
 <div class="container>">
-    <div class="widget">
+    
+    <div class="greeting" style="display: none;">
+        <div class="greet" id="greet"></div>
+    </div>
+    
 
-            <div class="greet" id="greet"></div>
+    <div class="widget">
 
             <div class="clock" style="display: none;">
                 <div class="time" id="hour"></div>
@@ -106,7 +115,7 @@ function dispalyGreetings(today){
 
     function dispalyDate(today) {  
        
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
